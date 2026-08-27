@@ -92,3 +92,23 @@ key.addEventListener("mouseleave", endNote);
 // audio file playback 
 const playbackButton = document.getElementById("playback-button");
 const audioTrack = document.getElementById("audio-track");
+
+function playPauseAudio (){
+if(audioTrack.paused === true){
+    audioTrack.play();
+} else {}
+audioTrack.pause();
+}
+
+playbackButton.addEventListener("click", playPauseAudio);
+
+// randomly scrub to location
+const randomButton = document.getElementById("random-location");
+
+function randomLocation(){
+    let trackLength = audioTrack.duration;
+    audioTrack.currentTime = trackLength * Math.random ();
+}
+
+randomButton.addEventListener("click", randomLocation);
+
