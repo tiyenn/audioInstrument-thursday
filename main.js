@@ -27,8 +27,10 @@ window.addEventListener("mouseup", function(){
 // browser loads html > browser loads js > js to open modal > user presses ok on modal > modal closes > audio init
 // user can also close modal with esc key
 // show modal on page load
+
 introModal.showModal();
 // when ok clicked, close modal
+
 introModalCloseButton.addEventListener("click", function closeIntroModal(){
     // close our modal
     introModal.close();
@@ -86,3 +88,7 @@ key.addEventListener("mousedown", playNote);
 key.addEventListener("mouseenter", playNote);
 key.addEventListener("mouseup", endNote);
 key.addEventListener("mouseleave", endNote);
+
+// audio file playback 
+const playbackButton = document.getElementById("playback-button");
+const audioTrack = document.getElementById("audio-track");

@@ -38,3 +38,13 @@ dialog[open] {
 button {
     border: var(--border);
 }
+
+.whiteKey {
+    cursor: pointer;
+}
+.whiteKey:hover {
+    background-color: coral;
+}
+.whiteKey:active {
+    background-color: red;
+}
