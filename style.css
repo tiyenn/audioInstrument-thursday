@@ -48,3 +48,9 @@ button {
 .whiteKey:active {
     background-color: red;
 }
+
+img {
+    /*need this to make layer event info work*/
+    position: relative;
+    margin: 1rem;
+}
