@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-/*saving our custom variables*/
-/*light mode*/
 :root {
     --colour-01: black;
     --colour-02: white;
@@ -10,47 +6,42 @@
     --border: 0.5rem inset var(--colour-03);
 }
 
-/*dark mode*/
-@media (prefers-color-scheme: dark) {
-    :root {
-        --colour-01: #f0f6f0;
-        --colour-02: black;
-        --colour-03: lightgray;
-        --colour-04: darkgray;
-    }
-}
-
 body {
-    font-family: "Work Sans", sans-serif;
-    background-color: var(--colour-02);
-    color: var(--colour-01);
-}
-
-dialog[open] {
-    background-color: var(--colour-02);
-    color: var(--colour-01);
-    border: var(--border);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-button {
-    border: var(--border);
+header {
+    margin-block-end: 3rem;
 }
 
-.whiteKey {
-    cursor: pointer;
-}
-.whiteKey:hover {
-    background-color: coral;
-}
-.whiteKey:active {
-    background-color: red;
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-img {
-    /*need this to make layer event info work*/
-    position: relative;
-    margin: 1rem;
+#instruction {
+    margin: 0;
 }
+
+#score {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.keys {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 7rem;
+    height: 7rem;
+    font-size: 1.5rem;
+}
+
+#random-button {
+    margin-block-start: 1rem;
+}
+
