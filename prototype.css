@@ -18,21 +18,58 @@ header {
 
 .game {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .keys {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    width: auto;
-    height: 7rem;
-    font-size: 1.5rem;
+    align-items: center;
+    gap: 10rem;
+    width: 13rem;
+    height: 13rem;
+}
+
+
+/* I used teacher circular code as reference but used chatgpt to help me assist with the math / degrees of the placement */
+
+.music-key {
+    position: absolute;
+    width: 2rem;
+    height: 5rem;
+}
+
+.music-key:nth-child(1) {
+    transform: translate(-4rem, -4rem);
+}
+
+.music-key:nth-child(2) {
+    transform: translate(4rem, -4rem);
+}
+
+.music-key:nth-child(3) {
+    transform: translate(-4rem, 4rem);
+}
+
+.music-key:nth-child(4) {
+    transform: translate(4rem, 4rem);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #score {
     font-size: 2rem;
-    margin: 0;
 }
+
