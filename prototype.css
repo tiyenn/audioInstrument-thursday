@@ -18,32 +18,21 @@ header {
 
 .game {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .keys {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    width: 7rem;
+    width: auto;
     height: 7rem;
     font-size: 1.5rem;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
-}
-
-.game {
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #score {
     font-size: 2rem;
+    margin: 0;
 }
