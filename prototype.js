@@ -87,7 +87,6 @@ key.addEventListener("click", function(){
     // ChatGPT has been used to help me understand how I can update the answers / user feedback on what was right and wrong
         score = score + 1;
         scoreDisplay.innerHTML = " ★" + score;
-        instruction.innerHTML = "Great job!";
         key.classList.add("correct");
         setTimeout(function(){
 
@@ -107,7 +106,6 @@ key.addEventListener("click", function(){
     // tell toddler to try again
 
     // I used AI to help me with the animations for feedback
-    instruction.innerHTML = "Try another one!";
 
     key.classList.add("wrong");
 
