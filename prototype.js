@@ -19,10 +19,17 @@ introModal.addEventListener("close", toneInit);
 
 // instrument
 const synth = new Tone.PolySynth();
+const wrongSound = new Tone.Synth();
+const rightSound = new Tone.Synth();
+
 function toneInit(){
 synth.connect(Tone.Destination);
+wrongSound.connect(Tone.Destination);
+rightSound.connect(Tone.Destination);
 
 }
+synth.connect(Tone.Destination);
+
 
 
 ////// the music keys
@@ -85,9 +92,12 @@ key.addEventListener("click", function(){
     if(key === targetKey){
 
     // ChatGPT has been used to help me understand how I can update the answers / user feedback on what was right and wrong
+    // as well as the sound effect in delay to make feedback
         score = score + 1;
         scoreDisplay.innerHTML = " ★" + score;
-        instruction.innerHTML = "Great job!";
+        setTimeout(function(){
+        rightSound.triggerAttackRelease("C5", "8n");
+        }, 150);
 
         setTimeout(function(){
 
@@ -97,9 +107,10 @@ key.addEventListener("click", function(){
 
     } else {
 
-        // tell toddler to try again
-        instruction.innerHTML = "Try another one!";
-
+        // sound effect - wrong - try again 
+        setTimeout(function(){
+        wrongSound.triggerAttackRelease("C3", "8n");
+       }, 150);
     }
 
 });
