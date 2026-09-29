@@ -23,40 +23,6 @@ header {
     gap: 2rem;
 }
 
-.keys {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-    width: 13rem;
-    height: 13rem;
-}
-
-
-/* I used teacher circular code as reference but used chatgpt to help me assist with the math / degrees of the placement */
-
-.music-key {
-    position: absolute;
-    width: 2rem;
-    height: 5rem;
-}
-
-.music-key:nth-child(1) {
-    transform: translate(-4rem, -4rem);
-}
-
-.music-key:nth-child(2) {
-    transform: translate(4rem, -4rem);
-}
-
-.music-key:nth-child(3) {
-    transform: translate(-4rem, 4rem);
-}
-
-.music-key:nth-child(4) {
-    transform: translate(4rem, 4rem);
-}
-
 h2 {
     display: flex;
     justify-content: center;
@@ -73,3 +39,14 @@ h2 {
     font-size: 2rem;
 }
 
+.music-key {
+    width: 7rem;
+    height: 7rem;
+    padding: 0;
+}
+
+.music-key img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

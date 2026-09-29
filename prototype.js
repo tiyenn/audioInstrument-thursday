@@ -60,7 +60,7 @@ instruction.innerHTML = "Press " + note + "!";
 
 }
 function playNote(e){
-let keyPressed = e.target;
+let keyPressed = e.currentTarget;
 let note = keyPressed.dataset.note;
 synth.triggerAttackRelease(note, "8n");
 
@@ -86,7 +86,7 @@ key.addEventListener("click", function(){
 
     // ChatGPT has been used to help me understand how I can update the answers / user feedback on what was right and wrong
         score = score + 1;
-        scoreDisplay.innerHTML = "" + score;
+        scoreDisplay.innerHTML = " ★" + score;
         instruction.innerHTML = "Great job!";
 
         setTimeout(function(){
