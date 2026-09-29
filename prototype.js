@@ -14,7 +14,6 @@ introModal.close();
 });
 introModal.addEventListener("close", toneInit);
 
-
 ////// tone
 
 // instrument
@@ -23,7 +22,6 @@ function toneInit(){
 synth.connect(Tone.Destination);
 
 }
-
 
 ////// the music keys
 
