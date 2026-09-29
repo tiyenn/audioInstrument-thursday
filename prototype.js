@@ -88,19 +88,36 @@ key.addEventListener("click", function(){
         score = score + 1;
         scoreDisplay.innerHTML = " ★" + score;
         instruction.innerHTML = "Great job!";
-
+        key.classList.add("correct");
         setTimeout(function(){
 
-            chooseRandomKey();
+        key.classList.remove("correct");
+    
+        }, 300);
+        setTimeout(function(){
+
+        chooseRandomKey();
 
         }, 800);
 
-    } else {
+    } 
+    
+    else {
 
-        // tell toddler to try again
-        instruction.innerHTML = "Try another one!";
+    // tell toddler to try again
 
-    }
+    // I used AI to help me with the animations for feedback
+    instruction.innerHTML = "Try another one!";
+
+    key.classList.add("wrong");
+
+    setTimeout(function(){
+
+        key.classList.remove("wrong");
+
+    }, 300);
+
+}
 
 });
 
