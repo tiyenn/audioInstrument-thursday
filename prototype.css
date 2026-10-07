@@ -1,0 +1,98 @@
+:root {
+    --colour-01: black;
+    --colour-02: white;
+    --colour-03: darkgray;
+    --colour-04: lightgray;
+    --border: 0.5rem inset var(--colour-03);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin: 3rem;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.keys {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 7rem;
+    height: 7rem;
+    font-size: 1.5rem;
+}
+
+.music-key {
+    transition: transform 0.2s;
+}
+
+.music-key:hover {
+    transform: scale(1.05);
+}
+
+/* I used AI to help me with the animations for feedback */
+
+.music-key.correct {
+    animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+.music-key.wrong {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+    
+}
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score {
+    font-size: 2rem;
+}
